@@ -1,0 +1,31 @@
+{
+  "name": "ai-task-bot-backend",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node --disable-warning=DEP0040 src/server.js",
+    "dev": "node --disable-warning=DEP0040 --watch src/server.js",
+    "worker": "node --disable-warning=DEP0040 src/worker.js",
+    "worker:dev": "node --disable-warning=DEP0040 --watch src/worker.js",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:generate": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@socket.io/redis-adapter": "^8.3.0",
+    "@socket.io/redis-emitter": "^5.1.0",
+    "bullmq": "^6.3.19",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "ioredis": "^6.0.0",
+    "openai": "^4.104.0",
+    "socket.io": "^4.8.1",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "prisma": "^5.22.0"
+  }
+}
